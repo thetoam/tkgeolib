@@ -26,3 +26,14 @@ int map_2points(double lon0, double lat0, double lon1, double lat1, double &arc,
 }
 
 
+int map_2points_deg(double lon0, double lat0, double lon1, double lat1, double &arc, double &az)
+{
+  int r;
+  double lon0_rad = lon0 * PI / 180.0;
+  double lat0_rad = lon0 * PI / 180.0;
+  double lon1_rad = lon0 * PI / 180.0;
+  double lat1_rad = lon0 * PI / 180.0;
+  r = map_2points(lon0_rad, lat0_rad, lon1_rad, lat1_rad, arc, az);
+  az *= 180.0 / PI;
+  return r;
+}

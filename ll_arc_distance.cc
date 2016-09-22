@@ -23,3 +23,16 @@ int ll_arc_distance(double lon, double lat, double arc, double az, double &outlo
 
   return 0;
 }
+
+
+int ll_arc_distance_deg(double lon, double lat, double arc, double az, double &outlon, double &outlat)
+{
+  int r;
+  double lon_rad = lon * PI / 180.0;
+  double lat_rad = lat * PI / 180.0;
+  double az_rad = az * PI / 180.0;
+  r = ll_arc_distance(lon_rad, lat_rad, arc, az_rad, outlon, outlat);
+  outlon *= 180.0 / PI;
+  outlat *= 180.0 / PI;
+  return r;
+}
