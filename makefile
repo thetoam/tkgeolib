@@ -1,6 +1,6 @@
 CC=g++
 CFLAGS=-c -Wall -fPIC
-LDFLAGS=
+LDFLAGS=-lm
 
 SOURCES=ll_arc_distance.cc map_2points.cc
 LIBNAME=tkgeolib
