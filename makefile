@@ -2,7 +2,7 @@ CC=g++
 CFLAGS=-c -Wall -fPIC
 LDFLAGS=-lm
 
-SOURCES=ll_arc_distance.cc map_2points.cc
+SOURCES=ll_arc_distance.cc map_2points.cc calc_sun_pos.cc
 LIBNAME=tkgeolib
 MAJOR=1
 MINOR=0
@@ -37,4 +37,3 @@ uninstall:
 	-rm /usr/lib/lib$(LIBNAME).so.$(MAJOR).$(MINOR)
 	-rm /usr/include/$(LIBNAME).h
 	/sbin/ldconfig
-
