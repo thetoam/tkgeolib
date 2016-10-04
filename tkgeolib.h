@@ -64,3 +64,26 @@ int ll_arc_distance_deg(double lon, double lat, double arc, double az, double &o
 * @param az Azimuthal direction (degrees) (passed by reference)
 */
 int map_2points_deg(double lon0, double lat0, double lon1, double lat1, double &arc, double &az);
+
+
+
+/**
+* Calculate the azimuth and zenith of the sun
+* <p>
+* Determine the location of the sun (azimuth and zenith) of the sun from given location (lon, lat,
+* alt) at a given time (year, month, day, hour, minute, second)
+*
+* @param yr Year
+* @param mo Month
+* @param dy Day
+* @param hr Hour
+* @param mt Minute
+* @param sc Second
+* @param lon Longitude (degrees)
+* @param lat latitude (degrees)
+* @param alt Altitude (m)
+* @param az Solar azimuth (degrees) (passed by reference)
+* @param zn Solar senith angle (degrees) (passed by reference)
+*/
+int calc_sun_pos(int yr, int mo, int dy, int hr, int mt, int sc, double lon, double lat, \
+                 double alt, double &az, double &zn);
